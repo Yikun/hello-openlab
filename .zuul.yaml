@@ -1,0 +1,13 @@
+- project:
+    name: Yikun/hello-openlab
+    check:
+      jobs:
+        - hello-openlab-test
+
+- job:
+    name: hello-openlab-test
+    parent: init-test
+    description: |
+      Hello OpenLab in OpenLab cluster.
+    run: .zuul/playbooks/hello-openlab-test/run.yaml
+    nodeset: ubuntu-xenial

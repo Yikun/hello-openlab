@@ -1,0 +1,8 @@
+- hosts: all
+  tasks:
+    - name: Hello OpenLab
+      shell:
+        cmd: |
+          set -xe
+          echo "Hello OpenLab"
+        executable: /bin/bash
